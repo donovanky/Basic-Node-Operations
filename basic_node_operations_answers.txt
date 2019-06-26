@@ -1,0 +1,19 @@
+Q:1.Run the commands sort, wc and uniq on the commands.js file. Explain how they work and what the output was.
+A:sort:The sorting command sorts the lines of code into alphabetical order. When we run sort commands.js, the output is the commands.js file but alphabetized (which is somewhat flawed in my mind as it counts spaces and backslashes as characters so a //write will be before a const. On the other hand, these are ultimately characters so I suppose it works). 
+wc: The wc command prints the counts for newline, word, and byte counts of a file. For our commands.js file, it logs: 40 98 988.
+uniq: The uniq command sorts a file and returns different lines. It does so as it removes the line if the one above it is the same. For our test of uniq.commands.js, it returns what actually appears to be the exact copy of our commands.js file.
+Q:2.Using the pipe (|) connect at least two commands and run it on commands.js. Explain what the output was and why the specific data was outputted.
+A: I chose to run the command: sort commands.js | wc so that the file would first be sorted, then the word, line, and byte sizes would be counted. The result was: 63    165    1700
+
+Q:6.
+Javascript
+```
+function reverseString(input) {
+  let reversedString = input.split("").reverse().join("").split(" ").reverse().join(" ");
+  return reversedString;
+}
+
+let result = reverseString("I feel like the way this was done could be improved. There are too many .split .reverse .join etc");
+
+console.log(result);
+```
